@@ -1,20 +1,32 @@
-import { Container, Grid } from "@mui/material";
+import { Fragment } from "react";
+import { Container, Grid, Typography } from "@mui/material";
+
+import TourCard from "./components/TourCard";
+import cities from "./data.json";
 
 import "./App.css";
-import TourCard from "./components/TourCard";
 
 function App() {
   return (
     <div className="App">
       <Container>
-        <Grid container spacing={3}>
-          <TourCard />
-          <TourCard />
-          <TourCard />
-          <TourCard />
-          <TourCard />
-          <TourCard />
-        </Grid>
+        {cities.map((city) => (
+          <Fragment key={city.id}>
+            <Typography
+              variant="h4"
+              component={"h2"}
+              marginTop={5}
+              marginBottom={3}
+            >
+              Top {city.name} Tours
+            </Typography>
+            <Grid container spacing={1}>
+              {city.tours.map((tour, index) => (
+                <TourCard key={index} tour={tour} />
+              ))}
+            </Grid>
+          </Fragment>
+        ))}
       </Container>
     </div>
   );
