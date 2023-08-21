@@ -1,7 +1,7 @@
 import { Container, Typography } from "@mui/material";
 import { Box } from "@mui/system";
 import QuiltedImageList from "../components/QuiltedImageList";
-import Accordions from "../components/Accordions";
+import FAQs from "../components/FAQs";
 
 export default function Tour() {
   return (
@@ -42,7 +42,7 @@ export default function Tour() {
       <Typography variant="h6" component="h4" marginBottom={3}>
         Frequently Asked Questions
       </Typography>
-      <Accordions />
+      <FAQs />
     </Container>
   );
 }
