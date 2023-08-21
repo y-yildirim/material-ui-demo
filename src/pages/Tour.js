@@ -1,7 +1,7 @@
 import { Container, Typography } from "@mui/material";
 import { Box } from "@mui/system";
-import { Paper } from "@mui/material";
 import QuiltedImageList from "../components/QuiltedImageList";
+import Accordions from "../components/Accordions";
 
 export default function Tour() {
   return (
@@ -42,10 +42,7 @@ export default function Tour() {
       <Typography variant="h6" component="h4" marginBottom={3}>
         Frequently Asked Questions
       </Typography>
-      <Paper
-        sx={{ position: "fixed", bottom: 0, left: 0, right: 0 }}
-        elevation={3}
-      ></Paper>
+      <Accordions />
     </Container>
   );
 }
