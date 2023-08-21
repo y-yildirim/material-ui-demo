@@ -1,11 +1,9 @@
-import { Card, Container, Typography } from "@mui/material";
+import { Container, Typography } from "@mui/material";
 import { Box } from "@mui/system";
-import { useState } from "react";
-import { BottomNavigation, BottomNavigationAction, Paper } from "@mui/material";
+import { Paper } from "@mui/material";
 import QuiltedImageList from "../components/QuiltedImageList";
 
 export default function Tour() {
-  const [value, setValue] = useState(0);
   return (
     <Container sx={{ width: 900 }}>
       <Typography variant="h3" component="h1" marginTop={3}>
@@ -15,6 +13,7 @@ export default function Tour() {
         <img
           src="https://media.timeout.com/images/105124791/750/422/image.jpg"
           height={325}
+          alt=""
         />
         <QuiltedImageList />
       </Box>
