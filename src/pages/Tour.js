@@ -2,6 +2,7 @@ import { Container, Typography } from "@mui/material";
 import { Box } from "@mui/system";
 import QuiltedImageList from "../components/QuiltedImageList";
 import FAQs from "../components/FAQs";
+import BookNow from "../components/BookNow";
 
 export default function Tour() {
   return (
@@ -43,6 +44,7 @@ export default function Tour() {
         Frequently Asked Questions
       </Typography>
       <FAQs />
+      <BookNow />
     </Container>
   );
 }
